@@ -12,6 +12,15 @@ To run your **Java MPI** code (`DistributedSum.java`) on **Ubuntu**, follow thes
 
 ---
 
+nano ~/.bashrc
+export MPJ_HOME=/home/darshan/Downloads/mpj-v0_44
+   export PATH=$MPJ_HOME/bin:$PATH
+   export CLASSPATH=$CLASSPATH:$MPJ_HOME/lib/mpj.jar
+source ~/.bashrc
+
+javac -cp /home/darshan/Downloads/mpj-v0_44/lib/mpj.jar Dist.java
+mpjrun.sh -np 4 Dist
+
 ### ✅ Prerequisites:
 
 1. **Java JDK** installed:
